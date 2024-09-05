@@ -7,8 +7,9 @@ namespace VitalFileOrganizer {
             string sourceDirectory = AppDomain.CurrentDomain.BaseDirectory;  // Root folder (where the exe is running)
             string destinationBaseDirectory = Path.Combine(sourceDirectory, "SortedPresets");  // Subfolder for sorted presets
 
-            // Get all .vital files in the source directory
-            string[] vitalFiles = Directory.GetFiles(sourceDirectory, "*.vital");
+            // Get all .vital files in the source directory and its subdirectories
+            string[] vitalFiles = Directory.GetFiles(sourceDirectory, "*.vital", SearchOption.AllDirectories);
+
 
             // Cache directory existence checks
             var createdDirectories = new HashSet<string>();
