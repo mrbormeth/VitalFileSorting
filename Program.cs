@@ -40,6 +40,9 @@ namespace VitalFileOrganizer {
                 }
             }
             Console.WriteLine("Sorting complete!");
+            // Wait for the user to press Enter
+            Console.WriteLine("Press Enter to exit...");
+            Console.ReadLine();
         }
 
         // Function to extract the preset style from the file content (assuming JSON for this example)
